@@ -11,6 +11,8 @@ fhirSchemaValidationMaxSeverity: INFORMATION #INFORMATION #WARNING
 testFileDirectories: []
 loadNpmDependencies: true
 snapshotDependenciesForSushi: true
+valueSetExpansionIgnoreUrls: 
+  - http://ihe-d.de/ValueSets/IHEXDSeventCodeList
 
 profileSets:
 

@@ -14,8 +14,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Check run Profile Loader
-        run: >
-          java -jar /workspace/profile-loader.jar 
-          -f napi-flow.yaml 
-          -l .ci/locations_ci.yaml
+      - name: Run Profile Loader
+        run: |
+          java -jar /workspace/profile-loader.jar \
+           -f napi-flow.yaml \
+           -l ./.ci/locations.yaml
+
+      - name: Archive validation results
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-report
+          path: target/flow/validationResults/report/html
+
+      - name: Result profiles
+        uses: actions/upload-artifact@v4
+        with:
+          name: metadata-resources
+          path: target/flow/MetadataResources

@@ -29,7 +29,7 @@ dependencies:
    rki.demis.r4.core:
      id: demis_core
      uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
-     version: 1.22.1
+     version: 1.23.2
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
