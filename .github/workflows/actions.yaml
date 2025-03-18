@@ -1,0 +1,21 @@
+name: GitHub Actions Profile Loader
+run-name: Running Profile Loader on GitHub
+on: [push]
+jobs:
+  container-test-job:
+    runs-on: ubuntu-latest
+    container:
+      image: dockerhub.fokus.fraunhofer.de:5000/demis-light/demis-profile-loader:latest
+      credentials:
+        username: ${{ secrets.user }}
+        password: ${{ secrets.gitlab_token }}
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Check run Profile Loader
+        run: >
+          java -jar /workspace/profile-loader.jar 
+          -f napi-flow.yaml 
+          -l .ci/locations_ci.yaml

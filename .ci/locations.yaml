@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=../../demis-profile-loader/src/main/resources/DEMIS-Locations.json
+locations:
+  - name: profile_fokus_fsh_example
+    type: FILESYSTEM
+    environment: PROD
+    fullPath: $GITHUB_WORKSPACE
+# ------------------------------------------------------------------------
+  - name: napi_output_location_example
+    type: FILESYSTEM
+    environment: PROD
+    fullPath: ${GITHUB_WORKSPACE}/target/flow
