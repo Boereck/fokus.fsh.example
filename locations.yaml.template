@@ -1,0 +1,15 @@
+locations:
+  # ------------------------------------------------------------------------
+  - name: profile_fokus_fsh_example
+    type: ARTIFACT_REPOSITORY
+    environment: PROD
+    #props: connection-properties-empty.yaml
+    url: https://github.com/Boereck/fokus.fsh.example.git
+    accessToken: xxxxxxxxxxxxxxxxxxxxxxxxxx
+# ------------------------------------------------------------------------
+  - name: napi_output_location_example
+    type: FILESYSTEM
+    environment: PROD
+    # output folder:
+    fullPath: <your_local_path>
+# ------------------------------------------------------------------------

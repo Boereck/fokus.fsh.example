@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../demis-profile-loader/src/main/resources/DEMIS-NotificationApiPublicationFlow.json
+name: flow_ars_local ####
+type: NAPI_PROFILE_GENERATION
+description: generates FHIR profiles for NAPI consumption
+keepTempFiles: false
+output: napi_output_location_example
+skipFhirSchemaValidation: false
+skipExampleValidation: false
+resourceParseMode: STRICT
+fhirSchemaValidationMaxSeverity: INFORMATION #INFORMATION #WARNING
+testFileDirectories: []
+loadNpmDependencies: true
+snapshotDependenciesForSushi: true
+enableTreeShaking: true
+terminologyServers: 
+  - http://tx.fhir.org/r4
+valueSetExpansionIgnoreUrls: 
+  - http://ihe-d.de/ValueSets/IHEXDSeventCodeList
+
+profileSets:
+
+  - identifier: fokus.fsh.example
+    artifactRepo: profile_fokus_fsh_example
+    reference: "github-action"
+    skipSanityCheckValidation: false
+    ignoredSanityChecks: []
