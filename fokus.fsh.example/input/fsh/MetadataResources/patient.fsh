@@ -17,6 +17,7 @@ Description: "An example profile of the Patient resource."
 * name 1..* MS
 * name only http://fhir.de/StructureDefinition/humanname-de-basis
 * address only http://fhir.de/StructureDefinition/address-de-basis
+  * district 1..*
 
 
 Instance: PatientExample
@@ -25,9 +26,11 @@ Description: "An example of a patient with a license to krill."
 * text
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is a test Patient</div>"
   * status = #generated
-* maritalStatus = http://terminology.hl7.org/CodeSystem/v2-0002#D "Divorced"
+* maritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#D "Divorced"
 
 * gender = #male
 * name
   * given[0] = "James"
-  * family = "Pond"
+  * family.extension[+]
+    * url = "http://fhir.de/StructureDefinition/humanname-namenszusatz"
+    * valueString = "Freiherr"
