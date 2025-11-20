@@ -14,8 +14,9 @@ Description: "An example profile of the Patient resource."
 * ^publisher = "Robert Koch Institut"
 
 * maritalStatus from http://terminology.hl7.org/ValueSet/v2-0002 (required)
-* name 1..* MS
+* name 1..* MS only http://fhir.de/StructureDefinition/humanname-de-basis
 * address only http://fhir.de/StructureDefinition/address-de-basis
+
 
 Instance: PatientExample
 InstanceOf: MyPatient
