@@ -26,7 +26,6 @@ publisher:
 #
 dependencies:
    de.basisprofil.r4: 1.4.0
-   rki.demis.common: 2.2.0
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can

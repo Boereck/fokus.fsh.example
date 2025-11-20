@@ -12,10 +12,10 @@ Description: "An example profile of the Patient resource."
 * ^date = "2023-09-18"
 * ^experimental = false
 * ^publisher = "Robert Koch Institut"
-* ^baseDefinition = https://demis.rki.de/fhir/StructureDefinition/NotifiedPerson
 
 * maritalStatus from http://terminology.hl7.org/ValueSet/v2-0002 (required)
 * name 1..* MS
+* address only http://fhir.de/StructureDefinition/address-de-basis
 
 Instance: PatientExample
 InstanceOf: MyPatient
@@ -24,6 +24,8 @@ Description: "An example of a patient with a license to krill."
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is a test Patient</div>"
   * status = #generated
 * maritalStatus = http://terminology.hl7.org/CodeSystem/v2-0002#D "Divorced"
+
+* gender = #male
 * name
   * given[0] = "James"
   * family = "Pond"
